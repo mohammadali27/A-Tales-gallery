@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with blue glaze finish",
+    "image": "/images/tiles/tile_001.jpg",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Marble White Tile",
+    "description": "Elegant white marble finish tile for luxury interiors",
+    "image": "/images/tiles/tile_002.jpg",
+    "category": "marble",
+    "price": 78.5,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Marble",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Granite Grey Tile",
+    "description": "Durable granite tile with modern grey texture",
+    "image": "/images/tiles/tile_003.jpg",
+    "category": "granite",
+    "price": 62.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Granite",
+    "inStock": true
+  },
+  {
+    "id": "tile_004",
+    "title": "Wood Texture Tile",
+    "description": "Wood-style ceramic tile with natural finish",
+    "image": "/images/tiles/tile_004.jpg",
+    "category": "wood",
+    "price": 55.25,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_005",
+    "title": "Black Matte Tile",
+    "description": "Stylish matte black tile for modern design",
+    "image": "/images/tiles/tile_005.jpg",
+    "category": "ceramic",
+    "price": 49.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": false
+  },
+  {
+    "id": "tile_006",
+    "title": "Beige Sand Tile",
+    "description": "Soft beige sand color tile for warm interiors",
+    "image": "/images/tiles/tile_006.jpg",
+    "category": "ceramic",
+    "price": 40.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_007",
+    "title": "Red Brick Tile",
+    "description": "Classic red brick style tile for rustic look",
+    "image": "/images/tiles/tile_007.jpg",
+    "category": "brick",
+    "price": 52.75,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Clay",
+    "inStock": true
+  },
+  {
+    "id": "tile_008",
+    "title": "Glossy Green Tile",
+    "description": "Shiny green glazed tile for decorative walls",
+    "image": "/images/tiles/tile_008.jpg",
+    "category": "ceramic",
+    "price": 47.3,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_009",
+    "title": "Pattern Design Tile",
+    "description": "Unique patterned tile for artistic interiors",
+    "image": "/images/tiles/tile_009.jpg",
+    "category": "decorative",
+    "price": 68.9,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": false
+  },
+  {
+    "id": "tile_010",
+    "title": "Stone Finish Tile",
+    "description": "Natural stone texture tile for outdoor use",
+    "image": "/images/tiles/tile_010.jpg",
+    "category": "stone",
+    "price": 72.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Stone",
+    "inStock": true
+  }
+]
