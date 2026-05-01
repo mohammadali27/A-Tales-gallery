@@ -29,7 +29,8 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
+        <main className=" max-w-7xl mx-auto">{children}</main>
+
         <FooterPage />
       </body>
     </html>
