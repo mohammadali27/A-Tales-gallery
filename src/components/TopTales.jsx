@@ -1,6 +1,6 @@
-
 import React from "react";
 import PhotoCard from "./PhotoCard";
+import Link from "next/link";
 
 const TopTales = async () => {
   const res = await fetch("https://a-tales-gallery.vercel.app/data.json");
@@ -15,12 +15,14 @@ const TopTales = async () => {
 
       <div className=" grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center mt-10 mb-5 container mx-auto gap-5">
         {topPhoto.map((item) => (
-          <PhotoCard key={item.id} item={item}/>
+          <PhotoCard key={item.id} item={item} />
         ))}
       </div>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto items-center justify-center mb-5 mt-5 block ">
-        View All Tales
-      </button>
+      <Link href="/Allphotos">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto items-center justify-center mb-5 mt-5 block ">
+          View All Tales
+        </button>
+      </Link>
     </div>
   );
 };
