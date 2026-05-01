@@ -1,5 +1,6 @@
 import { Button, Card } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PhotoCard = ({ item }) => {
@@ -19,7 +20,11 @@ const PhotoCard = ({ item }) => {
         <p>{item.title}</p>
         <p>prise $ {item.price}</p>
       </div>
-      <Button variant="outline" className="w-full">view more</Button>
+      <Link href={`/Allphotos/${item.id}`}>
+        <Button variant="outline" className="w-full">
+          view more
+        </Button>
+      </Link>
     </Card>
   );
 };
