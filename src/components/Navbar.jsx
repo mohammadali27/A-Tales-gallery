@@ -19,7 +19,7 @@ const Navbar = () => {
         </ul>
         <ul>
           <li>
-            <Link href="/All">All Tiles</Link>
+            <Link href="/Allphotos">All Photos</Link>
           </li>
         </ul>
         <ul>

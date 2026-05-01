@@ -1,16 +1,26 @@
-import { Card } from "@heroui/react";
+import { Button, Card } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 
 const PhotoCard = ({ item }) => {
   return (
-    <div className="justify-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-10 mb-5 container mx-auto gap-5">
-      <Card className=" ">
-        <Image src={item.image} alt={item.title} width={500} height={300} />
+    <Card className="border rounded-xl shadow-lg p-5">
+      <div className=" relative w-full aspect-square">
+        {" "}
+        <Image
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="rounded-lg"
+          src={item.image}
+          alt={item.title}
+        />
+      </div>
+      <div className=" flex items-center justify-between mt-3 mb-5">
         <p>{item.title}</p>
-        <p>${item.price}</p>
-      </Card>
-    </div>
+        <p>prise $ {item.price}</p>
+      </div>
+      <Button variant="outline" className="w-full">view more</Button>
+    </Card>
   );
 };
 
