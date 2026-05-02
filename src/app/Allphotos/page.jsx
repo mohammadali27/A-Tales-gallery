@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card, Button } from "@heroui/react";
+import { Card, } from "@heroui/react";
 import Link from "next/link";
 
 const AllPhotosCard = async () => {
