@@ -31,6 +31,9 @@ const Navbar = () => {
       <div className=" border-2 border-gray-400 rounded-lg px-4 py-2">
         <Link href="/signin">Signin</Link>
       </div>
+      <div className=" border-2 border-gray-400 rounded-lg px-4 py-2">
+        <Link href="/login">Login</Link>
+      </div>
     </div>
   );
 };

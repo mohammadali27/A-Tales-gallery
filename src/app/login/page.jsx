@@ -12,7 +12,14 @@ import {
   TextField,
 } from "@heroui/react";
 
+import { GrGoogle } from "react-icons/gr";
+
 export default function SignInPage() {
+  const HandelGoogle = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -84,6 +91,12 @@ export default function SignInPage() {
         </Button>
         <Button type="reset" variant="secondary">
           Reset
+        </Button>
+      </div>
+
+      <div className="flex items-center justify-between gap-2 ">
+        <Button onClick={HandelGoogle} className="w-full" variant="secondary">
+          <GrGoogle /> Sign up with Google
         </Button>
       </div>
     </Form>
