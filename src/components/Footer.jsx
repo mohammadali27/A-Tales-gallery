@@ -34,7 +34,7 @@ const FooterPage = () => {
           </ul>
         </div>
         <div className="gap-3">
-          <p className="text-2xl font-bold mb-5">Sosal link</p>
+          <p className="text-2xl font-bold mb-5">Follow Us</p>
           <ul className="flex items-center justify-center  gap-3">
             <li className=" ">
               <FaFacebook /> facebook

@@ -10,9 +10,11 @@ import {
   Input,
   Label,
   TextField,
+  Toast,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function SignUpPage() {
   const HandelFrom = async () => {
@@ -33,18 +35,18 @@ export default function SignUpPage() {
       password,
     });
     console.log({ data, error });
-    if (!error) {
+    if (data && !error) {
+       toast.success("Signup successful! You are now signed up.");
       router.push("/");
-      alert(
-        "Signup successful! Please check your email to verify your account.",
-      );
+      
     } else {
-      alert("Signup failed. Please try again.");
+      toast.error("Signup failed. Please try again.");
     }
   };
 
   return (
     <Form
+   
       className="flex w-96 flex-col gap-4 p-20 shadow-lg rounded-lg border mt-5 mb-5 mx-auto"
       render={(props) => <form {...props} data-custom="foo" />}
       onSubmit={onSubmit}
@@ -112,6 +114,7 @@ export default function SignUpPage() {
           <GrGoogle /> Sign in with Google
         </Button>
       </div>
+       <ToastContainer />
     </Form>
   );
 }

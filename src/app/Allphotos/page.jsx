@@ -1,14 +1,16 @@
 import Image from "next/image";
-import { Card, Spinner } from "@heroui/react";
+import { Card } from "@heroui/react";
 import Link from "next/link";
 
+import { auth } from "@/lib/auth";
+
 const AllPhotosCard = async () => {
+  
   const res = await fetch("https://a-tales-gallery.vercel.app/data.json");
   const photos = await res.json();
 
   return (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  mt-10 mb-5 container mx-auto gap-5">
-      
       {photos.map((item) => (
         <Card key={item.image} className="border rounded-xl shadow-lg p-5">
           <div className=" relative w-full aspect-square">

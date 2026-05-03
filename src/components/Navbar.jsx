@@ -33,7 +33,7 @@ const Navbar = () => {
         </ul>
         <ul>
           <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
-            <Link href="/MyProfile">My Profile</Link>
+            <Link href="/profile">My Profile</Link>
           </li>
         </ul>
       </div>
