@@ -4,6 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
+import { Avatar } from "@heroui/react";
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -24,7 +25,7 @@ const Navbar = () => {
         </ul>
         <ul>
           <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
-            <Link href="/Allphotos">All Photos</Link>
+            <Link href="/Allphotos">All Tiles</Link>
           </li>
         </ul>
         <ul>
@@ -35,7 +36,7 @@ const Navbar = () => {
       </div>
 
       <div className="">
-        {!user && 
+        {!user && (
           <ul className=" flex gap-4 items-center">
             <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
               <Link href="/signin">Signin</Link>
@@ -44,17 +45,18 @@ const Navbar = () => {
               <Link href="/login">Login</Link>
             </li>
           </ul>
-        }
-        {user && 
+        )}
+        {user && (
           <ul className=" flex gap-4 items-center">
-            <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
-              <Link href="/profile">Profile</Link>
-            </li>
+            <Avatar>
+              <Avatar.Image alt="John Doe" src={user?.image} />
+              <Avatar.Fallback>{user?.name.charAt(0, 2)}</Avatar.Fallback>
+            </Avatar>
             <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
               <Link href="/logout">Logout</Link>
             </li>
           </ul>
-        }
+        )}
       </div>
     </div>
   );
