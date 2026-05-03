@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card, } from "@heroui/react";
+import { Card } from "@heroui/react";
 import Link from "next/link";
 
 const AllPhotosCard = async () => {
@@ -18,6 +18,7 @@ const AllPhotosCard = async () => {
               className="rounded-lg"
               src={item.image}
               alt={item.title}
+              priority
             />
           </div>
           <div className=" flex items-center justify-between mt-3 mb-5">
@@ -25,7 +26,7 @@ const AllPhotosCard = async () => {
             <p>prise $ {item.price}</p>
           </div>
           <Link href={`/Allphotos/${item.id}`}>
-            <button  className="w-full outline outline-1 outline-gray-400 rounded py-2 px-4">
+            <button className="w-full outline outline-1 outline-gray-400 rounded py-2 px-4">
               View Details
             </button>
           </Link>

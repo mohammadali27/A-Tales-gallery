@@ -35,7 +35,9 @@ export default function SignUpPage() {
     console.log({ data, error });
     if (!error) {
       router.push("/");
-      alert("Signup successful! Please check your email to verify your account.");
+      alert(
+        "Signup successful! Please check your email to verify your account.",
+      );
     } else {
       alert("Signup failed. Please try again.");
     }

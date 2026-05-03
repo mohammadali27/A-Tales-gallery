@@ -13,6 +13,7 @@ import {
 } from "@heroui/react";
 
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignInPage() {
   const HandelGoogle = async () => {
@@ -32,7 +33,12 @@ export default function SignInPage() {
       callbackURL: "/",
     });
     console.log({ data, error });
-    alert("Signup successful! Please check your email to verify your account.");
+    if (!error) {
+      toast.success("Login successful! You are now logged in.");
+      router.push("/");
+    } else {
+      toast.error("Login failed. Please check your credentials.");
+    }
   };
 
   return (
