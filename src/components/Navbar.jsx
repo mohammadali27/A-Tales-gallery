@@ -33,13 +33,28 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="flex gap-4 items-center">
-        <div className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
-          <Link href="/signin">Signin</Link>
-        </div>
-        <div className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
-          <Link href="/login">Login</Link>
-        </div>
+
+      <div className="">
+        {!user && 
+          <ul className=" flex gap-4 items-center">
+            <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
+              <Link href="/signin">Signin</Link>
+            </li>
+            <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
+              <Link href="/login">Login</Link>
+            </li>
+          </ul>
+        }
+        {user && 
+          <ul className=" flex gap-4 items-center">
+            <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
+              <Link href="/profile">Profile</Link>
+            </li>
+            <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
+              <Link href="/logout">Logout</Link>
+            </li>
+          </ul>
+        }
       </div>
     </div>
   );

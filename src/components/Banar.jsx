@@ -5,7 +5,9 @@ import Marquee from "react-fast-marquee";
 const Banar = () => {
   return (
     <div className="text-center mt-10 mx-auto">
-      <p className="font-extrabold text-4xl ">Welcome to the Tales gallery!</p>
+      <p className="font-extrabold text-4xl mx-auto">
+        Welcome to the Tales gallery!
+      </p>
       <Marquee pauseOnHover={true} className="text-justify mt-5">
         <span className="text-2xl">
           The Tales Gallery is a wonderful world of creativity. The metal and
