@@ -26,11 +26,13 @@ export default function SignUpPage() {
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+    const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log({ name, email, password });
+    console.log({ name, image, email, password });
     const { data, error } = await authClient.signUp.email({
       name,
+      image,
       email,
       password,
     });
@@ -54,6 +56,12 @@ export default function SignUpPage() {
       <TextField isRequired name="name" type="text">
         <Label htmlFor="name">Name</Label>
         <Input placeholder="Enter your name" />
+        <FieldError />
+      </TextField>
+      
+      <TextField isRequired name="image" type="text">
+        <Label htmlFor="image">Image</Label>
+        <Input placeholder="Enter your image URL" />
         <FieldError />
       </TextField>
 
