@@ -7,6 +7,9 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
 
 const Navbar = () => {
+  const handelLogout = async () => {
+    await authClient.signOut();
+  };
   const userData = authClient.useSession();
   const user = userData.data?.user;
   console.log(user);
@@ -49,11 +52,15 @@ const Navbar = () => {
         {user && (
           <ul className=" flex gap-4 items-center">
             <Avatar>
-              <Avatar.Image alt="John Doe" src={user?.image} />
+              <Avatar.Image
+                alt="John Doe"
+                src={user?.image}
+                referrerPolicy="no-referrer"
+              />
               <Avatar.Fallback>{user?.name.charAt(0, 2)}</Avatar.Fallback>
             </Avatar>
             <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
-              <Link href="/logout">Logout</Link>
+              <Link href="/" onClick={handelLogout}>Logout</Link>
             </li>
           </ul>
         )}
