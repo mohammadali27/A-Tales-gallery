@@ -6,13 +6,13 @@ import React from "react";
 const PhotoCard = ({ item }) => {
   return (
     <Card className="border rounded-xl shadow-lg p-5">
-      <div className=" relative w-full aspect-square">
+      <div key={item.id} className=" relative w-full aspect-square">
         {" "}
         <Image
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="rounded-lg"
-          src={item.image}
+          src={item.image?item.image:null}
           alt={item.title}
         />
       </div>

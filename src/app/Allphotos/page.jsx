@@ -2,10 +2,7 @@ import Image from "next/image";
 import { Card } from "@heroui/react";
 import Link from "next/link";
 
-import { auth } from "@/lib/auth";
-
 const AllPhotosCard = async () => {
-  
   const res = await fetch("https://a-tales-gallery.vercel.app/data.json");
   const photos = await res.json();
 
