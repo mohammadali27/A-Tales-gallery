@@ -6,7 +6,7 @@ const TopTales = async () => {
   const res = await fetch("https://a-tales-gallery.vercel.app/data.json");
   const data = await res.json();
   console.log(data, "photos");
-  const topPhoto = data.slice(0, 6);
+  const topPhoto = data.slice(0, 4);
   return (
     <div>
       <div className="items-center mx-auto justify-center text-center mt-10 mb-5">

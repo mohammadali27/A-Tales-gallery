@@ -4,12 +4,14 @@ import Link from "next/link";
 import Catagory from "@/components/Catagory";
 
 const AllPhotosCard = async ({ searchParams }) => {
-  const {category} = await searchParams?.category || "";
+  const { category } = (await searchParams?.category) || "";
   const res = await fetch("https://a-tales-gallery.vercel.app/data.json");
   const photos = await res.json();
-  const filteredPhotos =category ? photos.filter(
-    (photo) => photo.category.toLowerCase() == category.toLowerCase(),
-  ) : photos;
+  const filteredPhotos = category
+    ? photos.filter(
+        (photo) => photo.category.toLowerCase() == category.toLowerCase(),
+      )
+    : photos;
 
   return (
     <>
@@ -17,9 +19,8 @@ const AllPhotosCard = async ({ searchParams }) => {
       <Catagory />
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  mt-10 mb-5 container mx-auto gap-5">
         {filteredPhotos.map((item) => (
-          <Card key={item.image} className="border rounded-xl shadow-lg p-5">
+          <Card key={item.id} className="border rounded-xl shadow-lg p-5">
             <div className=" relative w-full aspect-square">
-              {" "}
               <Image
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
