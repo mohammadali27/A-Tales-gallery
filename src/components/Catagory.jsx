@@ -7,7 +7,7 @@ const Catagory = async () => {
   const catagorys = await res.json();
 
   return (
-    <div className="hidden md:flex lg:flex space-x-3 items-center mx-auto space-y-3 mt-5 gap-3">
+    <div className="hidden flex-wrap md:flex lg:flex space-x-3 items-center mx-auto space-y-3 mt-5 gap-3">
       {catagorys.map((cat) => (
         <Link key={cat.id} href={`?catagory=${cat.title.toLowerCase()}`}>
           <Button variant="outline" size="sm">
