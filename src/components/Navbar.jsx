@@ -29,7 +29,7 @@ const Navbar = () => {
       <div
         className={`${isOpen ? "flex" : "hidden"}  md:flex lg:flex gap-4 items-center mx-auto justify-center font-bold relative`}
       >
-        <ul className=" sm:text-left md:flex gap-4 items-center absolute top-12 left-0 md:static bg-purple-800 p-4 rounded-lg">
+        <ul className=" sm:text-left md:flex gap-4 items-center absolute top-12 -left-30 md:static bg-purple-800 p-4 rounded-lg">
           <li className=" border-2 border-gray-400 rounded-lg px-4 py-2 hover:bg-blue-500 hover:border-red-500">
             <Link href="/">Home</Link>
           </li>
