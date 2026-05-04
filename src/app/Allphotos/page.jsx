@@ -4,7 +4,7 @@ import Link from "next/link";
 import Catagory from "@/components/Catagory";
 
 const AllPhotosCard = async ({ searchParams }) => {
-  const { category } = (await searchParams?.category) || "";
+  const category = await searchParams.category;
   const res = await fetch("https://a-tales-gallery.vercel.app/data.json");
   const photos = await res.json();
   const filteredPhotos = category
