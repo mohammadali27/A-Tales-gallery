@@ -4,7 +4,7 @@ import { FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 const FooterPage = () => {
   return (
     <div className="  ">
-      <div className=" mx-auto flex items-center justify-between p-20 bg-gray-400">
+      <div className=" mx-auto flex flex-col md:flex-row gap-8 items-center justify-between p-20 bg-gray-400">
         <div className=" items-center gap-3 ">
           <ul>
             <li>contect</li>
